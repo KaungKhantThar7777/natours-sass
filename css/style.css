@@ -1,12 +1,3 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
 :root {
   --light-green: #7ed56f;
   --medium-green: #55c57a;
@@ -23,12 +14,11 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
   padding: 30px;
 }
 
 .header {
-  height: 90vh;
+  height: 95vh;
   background-image: linear-gradient(
       to right bottom,
       rgb(126 213 111 / 80%),
@@ -40,4 +30,72 @@ body {
   background-position: top;
 
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.logo-box img {
+  height: 36px;
+}
+
+.text-box {
+  color: #fff;
+  text-transform: uppercase;
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.primary-heading-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+
+  animation-name: moveFromLeft;
+  animation-duration: 0.7s;
+}
+
+.primary-heading-sub {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 17.5px;
+
+  animation-name: moveFromRight;
+  animation-duration: 0.7s;
+}
+
+/* keyframmes */
+@keyframes moveFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
