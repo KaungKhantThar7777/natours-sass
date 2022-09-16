@@ -4,17 +4,22 @@
   --dark-green: #28b485;
 }
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
 body {
   font-family: "Lato", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.7;
-  padding: 30px;
+  padding: 3rem;
 }
 
 .header {
@@ -35,11 +40,11 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top: 3rem;
+  left: 3rem;
 }
 .logo-box img {
-  height: 36px;
+  height: 3.6rem;
 }
 
 .text-box {
@@ -54,13 +59,13 @@ body {
 }
 
 .primary-heading {
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 .primary-heading-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
   animation-name: moveFromLeft;
   animation-duration: 0.7s;
@@ -68,8 +73,8 @@ body {
 
 .primary-heading-sub {
   display: block;
-  font-size: 20px;
-  letter-spacing: 17.5px;
+  font-size: 2rem;
+  letter-spacing: 1.75rem;
 
   animation-name: moveFromRight;
   animation-duration: 0.7s;
@@ -79,10 +84,10 @@ body {
 @keyframes moveFromLeft {
   from {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   to {
     opacity: 1;
@@ -93,10 +98,10 @@ body {
 @keyframes moveFromRight {
   from {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   to {
     opacity: 1;
@@ -108,21 +113,22 @@ body {
 .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1rem);
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
   transform: translateY(-5px);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -138,7 +144,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.4s;
 }
 
@@ -160,7 +166,7 @@ body {
 @keyframes moveFromBottom {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   to {
