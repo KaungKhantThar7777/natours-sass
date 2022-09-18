@@ -1,0 +1,18 @@
+.about {
+  padding: 25rem 0;
+  margin-top: -20vh;
+  background-color: $color-gray-light-1;
+
+  &__content {
+    max-width: 1140px;
+    margin: 6rem auto;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    gap: 6rem;
+
+    > * {
+      flex: 1;
+    }
+  }
+}

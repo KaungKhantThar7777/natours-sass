@@ -20,3 +20,36 @@
     animation-duration: 0.7s;
   }
 }
+
+.secondary-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  //   display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-lighter,
+    $color-primary-darker
+  );
+
+  //   transition: all 0.3s;
+
+  //   &:hover {
+  //     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  //     transform: skewY(-2deg) skewX(15deg) scale(1.1);
+  //   }
+}
+
+.tertiary-heading {
+  text-transform: uppercase;
+  font-weight: 700;
+
+  font-size: 1.7rem;
+}
+
+p {
+  margin-bottom: 2rem;
+  color: $color-gray;
+}
