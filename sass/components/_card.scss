@@ -1,0 +1,150 @@
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 53rem;
+
+  border-radius: 3px;
+
+  --from-color: #{$color-primary-darker};
+  --to-color: #{$color-primary-lighter};
+
+  &-secondary {
+    --from-color: #{$color-secondary};
+    --to-color: #{$color-secondary-darker};
+  }
+
+  &-tertiary {
+    --from-color: #{$color-tertiary-darker};
+    --to-color: #{$color-tertiary};
+  }
+  &__side {
+    height: 100%;
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  }
+
+  &__side--front {
+    background-color: $color-white;
+  }
+
+  &__side--back {
+    background-image: linear-gradient(
+      to right bottom,
+      var(--from-color),
+      var(--to-color)
+    );
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotate(0);
+  }
+
+  &__photo {
+    background-size: cover;
+    background-position: center;
+    height: 23rem;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          var(--from-color),
+          var(--to-color)
+        ),
+        url(../img/nat-5.jpg);
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          var(--from-color),
+          var(--to-color)
+        ),
+        url(../img/nat-6.jpg);
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          var(--from-color),
+          var(--to-color)
+        ),
+        url(../img/nat-7.jpg);
+    }
+  }
+
+  &__heading {
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    width: 60%;
+  }
+
+  &__heading-span {
+    font-size: 2.8rem;
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary, 0.85),
+        rgba($color-secondary-darker, 0.85)
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.85),
+        rgba($color-primary-darker, 0.85)
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary, 0.85),
+        rgba($color-tertiary-darker, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+    text-align: left;
+    ul {
+      list-style-type: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        padding: 0.8rem;
+        text-align: center;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light-2;
+        }
+      }
+    }
+  }
+}
