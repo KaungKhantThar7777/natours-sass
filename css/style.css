@@ -143,6 +143,12 @@ p {
   .btn--white::after {
     background-color: #fff; }
 
+.btn--green {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #55c57a; }
+
 .btn::after {
   content: "";
   position: absolute;
@@ -299,6 +305,21 @@ p {
         text-align: center; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
+  .card__side--back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .card__price-box {
+    margin-bottom: 4rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #fff; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+    color: #fff; }
 
 .header {
   height: 95vh;
@@ -353,7 +374,7 @@ p {
     gap: 4rem; }
 
 .tours {
-  padding: 25rem 0;
+  padding: 25rem 0 15rem 0;
   text-align: center;
   background-color: #f7f7f7;
   margin-top: -10rem; }

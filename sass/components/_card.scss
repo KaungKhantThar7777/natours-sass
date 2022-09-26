@@ -147,4 +147,29 @@
       }
     }
   }
+
+  &__side--back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__cta {
+  }
+
+  &__price-box {
+    margin-bottom: 4rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: $color-white;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+    color: $color-white;
+  }
 }
