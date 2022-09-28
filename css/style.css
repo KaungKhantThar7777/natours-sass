@@ -64,6 +64,7 @@ body {
   font-size: 3.5rem;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(to right, #28b485, #7ed56f); }
@@ -115,6 +116,12 @@ p {
 
 .mb-6 {
   margin-bottom: 6rem; }
+
+.mx-auto {
+  margin: 0 auto; }
+
+.text-center {
+  text-align: center; }
 
 .btn:link, .btn:visited {
   text-decoration: none;
@@ -311,7 +318,8 @@ p {
     align-items: center;
     flex-direction: column; }
   .card__price-box {
-    margin-bottom: 4rem; }
+    margin-bottom: 4rem;
+    text-align: center; }
   .card__price-only {
     font-size: 1.4rem;
     text-transform: uppercase;
@@ -320,6 +328,60 @@ p {
     font-size: 6rem;
     font-weight: 100;
     color: #fff; }
+
+.story {
+  width: 75%;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 6rem;
+  margin: 0 auto;
+  transform: skew(-12deg);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.15); }
+  .story:not(:last-child) {
+    margin-bottom: 8rem; }
+  .story > * {
+    transform: skew(12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skew(12deg);
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transform: translate(-4rem) scale(1.4);
+    transition: all 0.3s; }
+  .story:hover .story__img {
+    transform: translate(-4rem) scale(1);
+    filter: blur(4px) brightness(90%); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+    opacity: 0; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  z-index: -1; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
 
 .header {
   height: 95vh;
@@ -375,7 +437,6 @@ p {
 
 .tours {
   padding: 25rem 0 15rem 0;
-  text-align: center;
   background-color: #f7f7f7;
   margin-top: -10rem; }
   .tours__cards {
@@ -384,3 +445,7 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem; }
+
+.stories {
+  padding: 15rem 0;
+  position: relative; }
