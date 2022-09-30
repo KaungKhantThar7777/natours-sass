@@ -1,0 +1,108 @@
+.form {
+  width: 50%;
+  padding: 4rem;
+
+  &__group {
+    &:not(:last-child) {
+      margin: 2rem 0;
+    }
+  }
+
+  &__input {
+    padding: 1.5rem 2rem;
+    background-color: $color-white;
+    font-family: inherit;
+    border: none;
+    display: block;
+    width: 70%;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+
+    &::placeholder {
+      transition: all 0.1s 0.2s;
+      opacity: 1;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-primary;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.1);
+
+      &::placeholder {
+        transition: all 0.1s;
+
+        opacity: 0;
+      }
+    }
+
+    &:not(:focus):invalid {
+      border-bottom: 3px solid $color-secondary-darker;
+    }
+
+    &:focus ~ .form__label {
+      transform: translateY(-7.5rem);
+      opacity: 1;
+    }
+
+    &:not(:focus):not(:placeholder-shown) ~ .form__label {
+      transform: translateY(-7.5rem);
+      opacity: 1;
+    }
+    &::-webkit-input-placeholder {
+      color: $color-gray-2;
+    }
+  }
+
+  &__label {
+    transition: all 0.3s;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    display: block;
+
+    transform: translateY(-3.5rem);
+    opacity: 0;
+  }
+
+  &__radio-group {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    input {
+      display: none;
+
+      &:checked ~ label .form__radio-button::after {
+        // border: 5px solid red;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+
+  &__radio-button {
+    width: 3rem;
+    height: 3rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.2s;
+      border-radius: 50%;
+      width: 1.3rem;
+      height: 1.3rem;
+      background-color: $color-primary;
+    }
+  }
+}
