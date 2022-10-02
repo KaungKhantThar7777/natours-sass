@@ -8,12 +8,24 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.26%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 /* keyframmes */
 @keyframes moveFromLeft {
@@ -59,6 +71,15 @@ body {
     letter-spacing: 1.75rem;
     animation-name: moveFromRight;
     animation-duration: 0.7s; }
+  @media (max-width: 37.5em) {
+    .primary-heading {
+      margin-bottom: 3rem; }
+      .primary-heading--main {
+        font-size: 4rem;
+        letter-spacing: 2.5rem; }
+      .primary-heading--sub {
+        font-size: 1.5rem;
+        letter-spacing: 1.25rem; } }
 
 .secondary-heading {
   font-size: 3.4rem;
@@ -67,6 +88,9 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(to right, #28b485, #7ed56f); }
+  @media (max-width: 37.5em) {
+    .secondary-heading {
+      font-size: 2.5rem; } }
 
 .tertiary-heading {
   text-transform: uppercase;
@@ -385,6 +409,19 @@ p {
   .story:hover .story__caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
+  @media (max-width: 37.5em) {
+    .story {
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      transform: skew(0deg); }
+      .story > * {
+        transform: skew(0deg);
+        text-align: center; }
+      .story__shape {
+        float: none; } }
 
 .bg-video {
   position: absolute;
@@ -471,6 +508,11 @@ p {
       width: 1.3rem;
       height: 1.3rem;
       background-color: #55c57a; }
+  @media (max-width: 56.25em) {
+    .form {
+      width: 100%; }
+      .form__input {
+        width: 100%; } }
 
 .navigation__checkbox {
   display: none; }
@@ -506,7 +548,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
 
 .navigation__background {
   background-image: radial-gradient(#28b485, #7ed56f);
@@ -602,6 +645,18 @@ p {
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem; }
+  .footer__content {
+    width: 80%;
+    display: flex;
+    gap: 8rem;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto; }
+    @media (max-width: 37.5em) {
+      .footer__content {
+        flex-direction: column;
+        gap: 1rem; } }
   .footer__logo-box {
     height: auto;
     margin-bottom: 8rem;
@@ -631,6 +686,14 @@ p {
     border-top: 1px solid #777;
     padding-top: 3rem;
     color: #999; }
+  @media (max-width: 37.5em) {
+    .footer {
+      gap: 1rem; }
+      .footer__copyright {
+        border-top: none;
+        padding-top: 0rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid #777; } }
 
 .about {
   padding: 25rem 0;
@@ -646,6 +709,12 @@ p {
     gap: 6rem; }
     .about__content > * {
       flex: 1; }
+    @media (max-width: 56.25em) {
+      .about__content {
+        flex-direction: column; } }
+  @media (max-width: 56.25em) {
+    .about {
+      padding: 25rem 8rem; } }
 
 .features {
   padding: 25rem 0;
@@ -661,6 +730,18 @@ p {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4rem; }
+  @media (max-width: 56.25em) {
+    .features {
+      padding: 8rem;
+      margin-top: 20rem; }
+      .features .features__boxes {
+        grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 37.5em) {
+    .features {
+      padding: 8rem;
+      margin-top: -3rem; }
+      .features .features__boxes {
+        grid-template-columns: 1fr; } }
 
 .tours {
   padding: 25rem 0 15rem 0;
@@ -672,6 +753,15 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem; }
+  @media (max-width: 56.25em) {
+    .tours {
+      margin-top: -6rem;
+      padding: 12rem 4rem; }
+      .tours__cards {
+        grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 37.5em) {
+    .tours__cards {
+      grid-template-columns: 1fr; } }
 
 .stories {
   padding: 15rem 0;
@@ -686,3 +776,9 @@ p {
     background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("/img/nat-10.jpg");
     background-size: cover;
     border-radius: 3px; }
+  @media (max-width: 56.25em) {
+    .booking {
+      padding: 4rem; }
+      .booking__form {
+        height: 60rem;
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("/img/nat-10.jpg"); } }

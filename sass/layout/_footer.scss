@@ -4,6 +4,19 @@
   padding: 10rem 0;
   font-size: 1.4rem;
 
+  &__content {
+    width: 80%;
+    display: flex;
+    gap: 8rem;
+    justify-content: space-between;
+
+    @include max-xl;
+
+    @include response(phone) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
   &__logo-box {
     height: auto;
     margin-bottom: 8rem;
@@ -49,5 +62,15 @@
     border-top: 1px solid $color-gray;
     padding-top: 3rem;
     color: $color-gray-2;
+  }
+
+  @include response(phone) {
+    &__copyright {
+      border-top: none;
+      padding-top: 0rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid $color-gray;
+    }
+    gap: 1rem;
   }
 }

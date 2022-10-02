@@ -50,4 +50,22 @@
     opacity: 1;
     transform: translate(-50%, -50%);
   }
+
+  @include response(phone) {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    transform: skew(0deg);
+
+    & > * {
+      transform: skew(0deg);
+      text-align: center;
+    }
+
+    &__shape {
+      float: none;
+    }
+  }
 }

@@ -19,6 +19,20 @@
     animation-name: moveFromRight;
     animation-duration: 0.7s;
   }
+
+  @include response(phone) {
+    margin-bottom: 3rem;
+
+    &--main {
+      font-size: 4rem;
+      letter-spacing: 2.5rem;
+    }
+
+    &--sub {
+      font-size: 1.5rem;
+      letter-spacing: 1.25rem;
+    }
+  }
 }
 
 .secondary-heading {
@@ -34,6 +48,10 @@
     $color-primary-lighter,
     $color-primary-darker
   );
+
+  @include response(phone) {
+    font-size: 2.5rem;
+  }
 
   //   transition: all 0.3s;
 
